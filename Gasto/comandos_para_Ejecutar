@@ -1,0 +1,6 @@
+ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-*.jar -file mapperGasto.py -mapper mapperGasto.py  -file reducerGasto.py -reducer reducerGasto.py  -file combinerGasto.py -combiner combinerGasto.py -input /user/$(whoami)/input/dataset.txt -output /user/$(whoami)/outputGasto
+ 
+ hadoop fs -cat /user/ger/outputGasto/part-00000
+ 
+ 
+
